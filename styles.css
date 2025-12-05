@@ -1,0 +1,150 @@
+/* GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+body {
+  background: #f5f6f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+/* FORM BOX */
+.form-box {
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* LOGO */
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.logo-icon {
+  width: 40px;
+  height: 40px;
+  background: #f8c100;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+}
+
+.logo-area h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* TITLE */
+.title {
+  font-size: 20px;
+  margin: 15px 0 20px;
+  color: #333;
+}
+
+/* INPUTS */
+label {
+  font-size: 14px;
+  color: #333;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 15px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #f8c100;
+  outline: none;
+}
+
+/* OPTIONS */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember input {
+  margin-right: 5px;
+}
+
+.forgot {
+  font-size: 13px;
+  color: #0071b8;
+  text-decoration: none;
+}
+
+.forgot:hover {
+  text-decoration: underline;
+}
+
+/* BUTTON */
+.signon-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.signon-btn:hover {
+  background: #000;
+}
+
+/* FOOTER LINKS */
+.extra-links {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.extra-links a {
+  color: #0071b8;
+  text-decoration: none;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+.extra-links span {
+  color: #777;
+  padding: 0 5px;
+}
