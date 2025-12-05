@@ -1,1 +1,73 @@
+.logo {
+  display: block;
+  max-height: 70px;
+}
+
+
+/* top bar */
+.top-bar {
+  font-size: 0.85rem;
+  color: #555;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.top-bar .top-left,
+.top-bar .top-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 1.5rem;
+}
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Fixed width */
+    height: 100%;
+    background-color: #f1f1f1;
+    padding: 16px;
+}
+
+.content {
+    margin-left: 200px; /* Matches sidebar width */
+    padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+
+.container {
+  display: flex; /* Makes the container a flex container */
+  flex-direction: row; /* Arranges columns horizontally */
+  gap: 20px; /* Adds space between columns */
+}
+
+.column {
+  flex: 1; /* Allows columns to grow and shrink equally */
+  display: flex; /* Makes each column a flex container */
+  flex-direction: column; /* Arranges articles vertically within the column */
+  gap: 10px; /* Adds space between articles within a column */
+  border: 1px solid #ccc; /* Optional: for visual separation */
+  padding: 15px;
+}
+
+article {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
 
