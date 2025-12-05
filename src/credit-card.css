@@ -58,6 +58,7 @@ search {
   gap: 1rem;
   z-index: 99;
 }
+
 .side-nav a {
   text-decoration: none;
   color: #343c6a;

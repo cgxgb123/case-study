@@ -7,6 +7,55 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Top-right organic blob (positioned via CSS) -->
+    <svg
+      class="bg-blob"
+      viewBox="0 0 864 719"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path
+        d="M257 137C121.4 149.8 29.1667 49 0 -3L864 0.5V718.5H767.5C468.7 680.5 519 529 581.5 458C618 408.167 684 288.1 656 206.5C621 104.5 426.5 121 257 137Z"
+        fill="#264ECA"
+      />
+    </svg>
+
+    <!-- Bottom-left concentric circles (three SVGs stacked with different transforms) -->
+    <svg
+      class="bg-circle circle-1"
+      viewBox="0 0 380 604"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="18" cy="362" r="362" fill="#264ECA" />
+    </svg>
+
+    <svg
+      class="bg-circle circle-2"
+      viewBox="0 0 380 604"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="18" cy="362" r="262" fill="#2f5fe6" opacity="0.85" />
+    </svg>
+
+    <svg
+      class="bg-circle circle-3"
+      viewBox="0 0 380 604"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="18" cy="362" r="160" fill="#2f5fe6" opacity="0.55" />
+    </svg>
+
     <div class="container">
       <div class="form-box">
         <div class="logo-area">
@@ -18,18 +67,13 @@
 
         <form>
           <label for="username"></label>
-          <input
-            type="text"
-            id="username"
-            placeholder="Enter User Name"
-            required
-          />
+          <input type="text" id="username" placeholder="Username" required />
 
           <label for="password"></label>
           <input
             type="password"
             id="password"
-            placeholder="Enter Password"
+            placeholder="Password"
             required
           />
 
@@ -40,7 +84,9 @@
             <a href="#" class="forgot">Forgot Password?</a>
           </div>
 
-          <button type="submit" class="signon-btn">Sign On</button>
+          <button type="submit" class="signon-btn">
+            <a href="./credit-card.html">Sign On</a>
+          </button>
         </form>
 
         <div class="extra-links">

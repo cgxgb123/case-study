@@ -5,12 +5,19 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+body,
+html {
+  background-color: #2148c0;
+}
 .logo img {
   height: 50px;
   width: auto;
   object-fit: contain;
 }
-
+a {
+  color: inherit;
+  text-decoration: none;
+}
 body {
   background: #f5f6f7;
   display: flex;
@@ -147,4 +154,91 @@ input:focus {
 .extra-links span {
   color: #777;
   padding: 0 5px;
+}
+/* Page background and SVG artwork positioning */
+body {
+  margin: 0;
+  background: #163bb8; /* deep-blue base similar to wireframe */
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Place the top-right blob */
+.bg-blob {
+  position: fixed;
+  top: 20px; /* tweak to move up/down */
+  right: 24px; /* tweak to move left/right */
+  width: 45vw; /* scales with viewport */
+  max-width: 960px; /* don't grow too big on wide screens */
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.98;
+  transform: translateZ(0);
+  color: #264eca;
+}
+
+/* Base for all bottom-left circles */
+.bg-circle {
+  position: fixed;
+  left: -160px; /* offscreen to create the large ring visible on the left */
+  bottom: -120px; /* partial offscreen so circles peek in */
+  width: 520px;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+  transform-origin: left bottom;
+}
+
+/* Individual circle offsets & sizing so they look concentric and layered */
+.bg-circle.circle-1 {
+  left: -200px;
+  bottom: -160px;
+  width: 720px;
+  opacity: 1;
+  filter: blur(0.2px);
+}
+
+.bg-circle.circle-2 {
+  left: -140px;
+  bottom: -100px;
+  width: 520px;
+  opacity: 0.85;
+  transform: scale(0.85);
+}
+
+.bg-circle.circle-3 {
+  left: -80px;
+  bottom: -40px;
+  width: 340px;
+  opacity: 0.6;
+  transform: scale(0.55);
+}
+
+/* Ensure the form and container sit above the artwork */
+.container,
+.form-box,
+.logo-area,
+.form-box * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Minor responsive adjustments */
+@media (max-width: 720px) {
+  .bg-blob {
+    display: none;
+  } /* hide blob on small screens */
+  .bg-circle {
+    left: -120px;
+    bottom: -120px;
+    width: 420px;
+  }
+  .container {
+    padding: 24px;
+  }
 }
